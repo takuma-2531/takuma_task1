@@ -54,6 +54,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC4-X6-Whg">
                                 <rect key="frame" x="41" y="230" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapSumButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4c-t8-Ny0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -85,6 +88,14 @@
                             <constraint firstItem="Rtt-pP-VdA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wtM-Ab-gWt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="GkS-To-GlJ" id="dUJ-iZ-FGE"/>
+                        <outletCollection property="numberTextFieldCollection" destination="yhd-Qc-uGz" collectionClass="NSMutableArray" id="4y3-Kv-UQ1"/>
+                        <outletCollection property="numberTextFieldCollection" destination="Rtt-pP-VdA" collectionClass="NSMutableArray" id="xBi-r2-txA"/>
+                        <outletCollection property="numberTextFieldCollection" destination="0Gd-FU-gtL" collectionClass="NSMutableArray" id="LBL-7l-F7D"/>
+                        <outletCollection property="numberTextFieldCollection" destination="mQO-kl-r6u" collectionClass="NSMutableArray" id="Wha-QM-PDQ"/>
+                        <outletCollection property="numberTextFieldCollection" destination="Ixh-FD-vt3" collectionClass="NSMutableArray" id="PJy-97-bji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
