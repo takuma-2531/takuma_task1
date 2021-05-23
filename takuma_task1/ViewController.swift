@@ -9,7 +9,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     @IBOutlet private var numberTextFieldCollection: [UITextField]!
-    @IBOutlet weak private var answerLabel: UILabel!
+    @IBOutlet private weak var answerLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,7 @@ final class ViewController: UIViewController {
 
     @IBAction private func tapSumButton(_ sender: UIButton) {
         let numbers = numberTextFieldCollection.map { Int($0.text!) ?? 0 }
-        let sum = numbers.reduce(0) { num1, num2 -> Int in
-            num1 + num2
-        }
+        let sum = numbers.reduce(0, +)
         answerLabel.text = String(sum)
     }
 }
